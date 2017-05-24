@@ -127,3 +127,130 @@ tar -tJf 1.tar.xz
 tar --exclude 12.txt -cvf 111.tar 111
 tar --exclude 12.txt --exclude aminglinux.txt -cvf 111.tar 111
 ```
+
+## 2.2 rpm安装和卸载
+```
+rpm == redhat package manager
+left side : package name
+next: version number  semantic versioning
+next: system bit
+rpm -ivh zip-3.0-1.e16.i686.rpm   install visual human
+rpm -ivh --nodeps zip-3.0-1.e16.i686.rpm   dont install dependency
+rpm -ivh --force zip-3.0-1.e16.i686.rpm   even you install it previously
+rpm -e yp-tools
+rpm -Uvh ypbind-1.20.4-30.e16.i686.rpm
+```
+
+## 2.3 rpm查询
+```
+rpm -e        uninstall a package
+rpm -qa       view all installed package
+rpm -qa gnome-doc-utils
+rpm -ga |grep vim  
+rpm -qi gnome-doc-utils
+rpm -ql  package       all what files this package has installed
+rpm -qf /usr/share/man/man1/xml2po.1.gz   view what package install this file
+which vim
+rpm -qf /usr/bin/vim      check which package install vim
+rpm -qf `which vim`   == rpm -qf /usr/bin/vim
+rpm -qi package    infomation about the package
+```
+
+## 2.4 yum工具详解
+Package manager developed by Redhat enterprise, you can specify its source
+```
+yum list        view all the package from the source
+vim /etc/yum.repos.d/CentOS-Base.repo      view yum source
+yum list |grep vim    search vim related rpm package
+yum install vim-X11  
+yum search 'vim'   
+yum install -y vim-enhanced   
+yum remove vim-enhanced
+yum update vim-enhanced
+yum update; yum upgrade     upgrade the system repo
+yum grouplist
+LANGE=en      then    yum grouplist     it will become english
+yum groupinstall 'Afrikaans Support'
+yum grouplist |grep -i chinese
+yum groupremove 'Chinese Support'
+
+1、yum list	//列出所有可用的rpm包
+其中，最左侧是rpm包名字，中间是版本信息，最右侧是安装信息
+2、yum list |grep vim	//搜索关于vim的rpm包
+其中，带了‘@’符号的表示已经安装了包
+yum search 'vim'	//搜索含有‘vim’关键字的rpm包
+格式： yum search [相关关键词]
+3、yum install vim-X11	//安装 vim-X11的rpm包
+格式：yum  install [-y] [rpm包名] （不建议加-y）
+4、yum remove vim-X11	//卸载vim-X11的rpm包
+格式：yum remove [-y] [rpm包名]
+5、yum update libselinux	//升级libselinux的rpm包
+格式：yum update [-y] [rpm包]
+yum update 和 yum upgrade 都可以升级系统里所有的rpm包
+```
+
+## 2.5 搭建本地yum仓库
+```
+install from rpm package
+make a local yum source with package from CD-ROM
+mount /dev/cdrom /mnt
+cd /etc/yum.repos.d/
+cp -r yum.repos.d/ yum.repos.d.bak
+rm -rf CentOS-Base.repo     after deletion, you can't use online repo
+yum list   list 出来全部带有@ 说明这些包已经安装过了
+vim CentOS-Media.repo
+
+
+[local_dc]  define yum source
+name=cd
+baseurl=file:///mnt/
+gpgcheck=0  
+enabled=1
+#gpgkey
+
+
+yum list      after edit repo file, run this command
+
+```
+
+## 2.6 yum如何下载rpm包到本地
+```
+cd /etc/yum.repos.d
+yum install -y yum-plugin-download
+yum list |grep download
+yum install vte --downloadonly
+yum install vte --downloadonly --downloaddir=/tmp/
+yum reinstall vim-enhanced --downloadonly --downloaddir=/tmp/
+```
+
+## 2.7 源码编译安装
+```
+源码包  然后编译安装
+linux 是用C写的 常用软件是用C或者C++写
+httpd apache
+Where to download source code? official website
+wget http://mirrors.hust.edu.cn/apache/httpd/httpd-2.4.25.tar.bz2
+yum install -y wget
+cd /usr/local/src/     where all source code live
+tar -jxvf httpd-2.4.23
+cd httpd-2.4.23
+ls
+vim install
+vim readme
+
+第一步
+./configure --help
+./configure --prefix=/usr/local/apache2
+echo $?   if 0 , then ok
+
+第二步就是编译
+make
+
+最后一步
+make install
+
+After installation
+ls /usr/local/apache/
+
+
+```
