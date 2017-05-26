@@ -1,7 +1,12 @@
 ## 1.1 学习之初
 
 ### 学这个课程目的是？
-
++ Setup git server
++ Setup CI server
++ Setup development environment or docker, so every time user git push, the + code will automatically deployed
++ Master nginx and being able to combile nginx with node
++ Use cool features like load balance
++ Learn server administration tricks so I know when I need to upgrade my server, what’s taking up server resources
 
 ### 学完之后要做的职位是什么？
 NodeJS开发
