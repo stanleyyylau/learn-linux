@@ -128,3 +128,51 @@ ls 10.txt && ls 2.txt     && 左右两边是命令  前面的命令执行成功�
 ls 10.txt || 20.txt   左边的命令执行不成功，才会执行右边的命令
 # ； ： 左边的命令执行成功与否，后面的都执行
 ```
+
+## 2.1 grep过滤-1
+```
+grep
+用来过滤出指定的行
+grep 'root' /etc/passwd    过滤匹配root的行
+grep --color 'root'  用颜色标注
+grep --color -n 'root'  用颜色标注   -n可以查看它是在哪一行
+alias cg='grep --color'
+vim .bashrc    永久使用alias
+cg -n 'root' 1.txt
+cg -v 'root' 1.txt    v是reserve 取反，匹配所有不包含root的
+cg -n -A 2 'root' 1.txt
+cg -A 2 'root' 1.txt  A2 表示除了输入符合结果的行还输出他们的下面两行
+cg -B 2 'games' 1.txt   上面两行
+cg -C 2 'games' 1.txt   上下两行都显示出来
+cg -r 'iptables' /etc/*    recursively match folders and files
+cg -rh 'iptables' /etc/*  human readable 不显示前面的文件
+```
+
+## 2.2 grep过滤-2
+```
+grep -n 'aming' 1.txt
+cg '[0-9]' 1.txt   过滤出带有数字的行
+cg '[aN]' 1.txt
+cg '[a-zA-Z]' 1.txt
+cg -v '[a-zA-Z]' 1.txt  匹配所有特殊字符和纯数字的行
+cg '^[a-a]' 1.txt
+cg -v '[^0-9]' 1.txt
+cg '^$' 1.txt
+cg 'r.o' 1.txt     . means any charater
+cg 'r.*0' 1.txt  帮你复习正则
+```
+
+## 2.3 grep过滤-3
+```
+grep -E == egrep
+grep --color 'r\?0' 1.txt  == egrep --color 'r?o' 1.txt
+egrep --color 'r+o' 1.txt
+.任意一个字符
+*重复前面那个字符0++次
+?重复前面那个字符1++次
+egrep ---color 'root|nologin' 1.txt
+grep --color 'root' 1.txt |grep --color 'nologin'  用管道符号表示并且
+egrep --color '(rr)+' 1.txt    rr必须成对出现
+egrep --color '(rr){1，3}+' 1.txt
+
+```
