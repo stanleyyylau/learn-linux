@@ -176,3 +176,33 @@ egrep --color '(rr)+' 1.txt    rr必须成对出现
 egrep --color '(rr){1，3}+' 1.txt
 
 ```
+
+## 2.4 sed命令-1
+```
+sed -n '/r.o/'p 1.txt
+所有grep能用正则, sed都能用, 只不过要转义
+sed 可以直接进行删除操作
+sed '/^$'d 1.txt    把空行去掉 d 就是删除
+sed '/[0-9]/'d 1.txt   把数字行删除
+sed '1,19'd 1.txt  删除1到19行
+sed -i '1,19'd 1.txt   -a是直接操作，不打印到屏幕，可能会误删某些东西
+sed -n '/aming/'p 1.txt  过滤出含有'aming'的行
+```
+
+## 2.5 sed命令-2
+```
+sed 还可以直接替换
+sed '1,10s/nologin/login/g' 1.txt  把nologin替换成login
+sed '1,10s/\/sbin\/nologin/login/g' 1.txt 要脱义
+sed '1,10s#/sbin/nologin#login#g' 1.txt 如果不想用转义的话
+sed 's#^.*$#login#g' 1.txt 不指定行，全局  所有行都会变成login
+sed 's#^.*$#&login#g' 1.txt 在所有的行的后面加上login
+
+```
+
+## 2.6 awk命令-1
+```
+和前两个比，这个功能更强大，还可以分割！
+可以数学运算，比较逻辑运算等
+
+```
