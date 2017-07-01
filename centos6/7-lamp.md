@@ -1,14 +1,38 @@
-## 1.1 Mysql安装
-+ 需要先安装MySQL
-+ 按照[LAMP环境搭建](http://www.apelearn.com/study_v2/chapter17.html) 这个步骤安装
-+ 下载包的时候注意32位是64位的区别
-+ Port和socket都可以通信
-+ 拷贝一个配置文件
-+ 拷贝一个驱动脚本
-```
-log-bin=mysql-bin
+## lnmp环境的搭建
+* [参考链接](http://www.apelearn.com/study_v2/chapter17.html)
 
-启动之后
-ps aux |grep mysql 看看进程是否在运行
-netstat -lnp |grep mysql 看看端口
-```
+## APACHE 用户认证
+
+## 禁用默认虚拟主机
+
+## 域名301跳转
+
+## APACHE 日志切割
+
+## APACHE 不记录指定文件类型日志
+
+## APACHE 配置静态缓存
+
+## APACHE 配置防盗链
+
+## APACHE 访问控制
+
+## APACHE 禁止解析PHP
+
+## APACHE 禁止指定User_Agent
+
+## APACHE 通过REWRITE限制某个目录
+
+## PHP.INI 配置文件详解
+
+## PHP 扩展模块如何安装
+
+## MYSQL 配置讲解
+
+## MYSQL 的ROOT密码重置
+
+## MYSQL登录
+
+## MYSQL常用操作
+
+## MYSQL备份与恢复
