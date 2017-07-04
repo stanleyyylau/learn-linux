@@ -22,7 +22,7 @@
 ## APACHE 禁止指定User_Agent
 
 ## APACHE 通过REWRITE限制某个目录
-
+·
 ## PHP.INI 配置文件详解
 
 ## PHP 扩展模块如何安装
@@ -36,3 +36,6 @@
 ## MYSQL常用操作
 
 ## MYSQL备份与恢复
+
+## 扩展链接
+https://stackoverflow.com/questions/12928703/good-apache-http-server-tutorials-for-beginners
