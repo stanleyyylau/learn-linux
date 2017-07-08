@@ -137,6 +137,6 @@ $ipt -A INPUT -p tcp --dport 21 -j ACCEPT
 
 
 ## 扩展
-http://ask.apelearn.com/question/1003
-http://ask.apelearn.com/question/3624
-https://www.google.com.hk/search?q=%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84&oq=%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84&aqs=chrome..69i57j69i61l2&sourceid=chrome&ie=UTF-8
+* http://ask.apelearn.com/question/1003
+* http://ask.apelearn.com/question/3624
+* 谷歌‘端口映射’
