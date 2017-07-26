@@ -1,0 +1,281 @@
+一周第一次课（5月26日）
+1.1 学习之初
+1.2 约定
+1.3 认识Linux
+1.4 安装虚拟机
+1.5 安装centos7
+
+一周第二次课（5月27日）
+1.6/1.7 配置IP
+1.8 网络问题排查
+
+一周第三次课（5月31日）
+1.9 使用PuTTY远程连接Linux
+1.10 使用xshell连接Linux
+1.11 PuTTY密钥认证
+1.12 xshell密钥认证
+#####################
+给大家定个规矩：
+当天任务务必要在第二天上午11点前完成，并回复专贴（发上你的笔记链接，要求可以直接点进去看）。
+没有在11点前回复专贴或者不回复笔记的，都会扣10分，即使后期补上的也会扣5分。
+
+
+一周第四次课（6月1日）
+1.13 单用户模式
+1.14 救援模式
+1.15 克隆虚拟机
+1.16 Linux机器相互登录
+
+一周第五次课（6月2日）
+2.1/2.2 系统目录结构
+2.3 ls命令
+2.4 文件类型
+2.5 alias命令
+
+二周第一次课（6月5日）
+2.6 相对和绝对路径
+2.7 cd命令
+2.8 创建和删除目录mkdir/rmdir
+2.9 rm命令
+
+二周第二次课（6月6日）
+2.10 环境变量PATH
+2.11 cp命令
+2.12 mv命令
+2.13 文档查看cat/more/less/head/tail
+
+二周第三次课（6月7日）
+2.14 文件和目录权限chmod
+2.15 更改所有者和所属组chown
+2.16 umask
+2.17 隐藏权限lsattr/chattr
+
+二周第四次课（6月8日）
+2.18 特殊权限set_uid
+2.19 特殊权限set_gid
+2.20 特殊权限stick_bit
+2.21 软链接文件
+2.22 硬连接文件
+
+二周第五次课（6月9日）
+2.23/2.24/2.25 find命令
+2.26 文件名后缀
+
+三周第一次课(6月12日）
+2.27linux和windows互传文件
+3.1 用户配置文件和密码配置文件
+3.2 用户组管理
+3.3 用户管理
+
+三周第二次课(6月13日）
+3.4 usermod命令
+3.5 用户密码管理
+3.6 mkpasswd命令
+
+三周第三次课(6月14日）
+3.7 su命令
+3.8 sudo命令
+3.9 限制root远程登录
+
+扩展
+sudo与su比较 http://www.apelearn.com/bbs/thread-7467-1-1.html 
+sudo配置文件样例  www.opensource.apple.com/source/sudo/sudo-16/sudo/sample.sudoers
+sudo -i 也可以登录到root吗？ http://www.apelearn.com/bbs/thread-6899-1-1.html
+
+三周第四次课(6月15日）
+4.1 df命令
+4.2 du命令
+4.3/4.4 磁盘分区
+扩展学习    parted分区gpt格式  http://www.apelearn.com/bbs/thread-7243-1-1.html
+
+三周第五次课(6月16日）
+4.5/4.6 磁盘格式化
+4.7/4.8 磁盘挂载
+4.9 手动增加swap空间
+
+四周第一次课(6月19日）
+4.10/4.11/4.12 lvm讲解
+4.13 磁盘故障小案例
+
+四周第二次课（6月20日）
+5.1 vim介绍
+5.2 vim颜色显示和移动光标
+5.3 vim一般模式下移动光标
+5.4 vim一般模式下复制、剪切和粘贴
+
+四周第三次课（6月21日）
+5.5 进入编辑模式
+5.6 vim命令模式
+5.7 vim实践
+
+扩展
+vim的特殊用法 http://www.apelearn.com/bbs/thread-9334-1-1.html
+vim常用快捷键总结 http://www.apelearn.com/bbs/thread-407-1-1.html
+vim快速删除一段字符 http://www.apelearn.com/bbs/thread-842-1-1.html
+vim乱码 http://www.apelearn.com/bbs/thread-6753-1-1.html
+小键盘问题 http://www.apelearn.com/bbs/thread-7215-1-1.html
+vim加密  http://www.apelearn.com/bbs/thread-7750-1-1.html
+
+四周第四次课（6月22日）
+6.1 压缩打包介绍
+6.2 gzip压缩工具
+6.3 bzip2压缩工具
+6.4 xz压缩工具
+
+四周第五次课（6月23日）
+6.5 zip压缩工具
+6.6 tar打包
+6.7 打包并压缩
+看下这个帖子： http://ask.apelearn.com/question/5435
+
+五周第一次课（6月26日）
+7.1 安装软件包的三种方法
+7.2 rpm包介绍
+7.3 rpm工具用法
+7.4 yum工具用法
+7.5 yum搭建本地仓库（视频中ppt小错误： gpcheck改为gpgcheck，yum cean 改为 yum  clean）
+扩展
+1. yum保留已经安装过的包   http://www.360doc.com/content/11/0218/15/4171006_94080041.shtml
+2. 搭建局域网yum源  http://ask.apelearn.com/question/7627
+
+五周第二次课（6月27日）
+7.6 yum更换国内源
+7.7 yum下载rpm包
+7.8/7.9 源码包安装
+扩展
+1. 配置yum源优先级  http://ask.apelearn.com/question/7168
+2. 把源码包打包成rpm包   http://www.linuxidc.com/Linux/2012-09/70096.htm
+
+五周第三次课（6月28日）
+8.1 shell介绍
+8.2 命令历史
+8.3 命令补全和别名
+8.4 通配符
+8.5 输入输出重定向
+
+五周第四次课（6月29日）
+8.6 管道符和作业控制
+8.7/8.8 shell变量
+8.9 环境变量配置文件
+扩展
+bashrc和bash_profile的区别   http://ask.apelearn.com/question/7719
+
+五周第五次课（6月30日）
+8.10 shell特殊符号cut命令
+8.11 sort_wc_uniq命令
+8.12 tee_tr_split命令
+8.13 shell特殊符号下
+相关测验题目：http://ask.apelearn.com/question/5437
+扩展
+1. source exec 区别 http://alsww.blog.51cto.com/2001924/1113112
+2. Linux特殊符号大全http://ask.apelearn.com/question/7720
+3. sort并未按ASCII排序 http://blog.csdn.net/zenghui08/article/details/7938975
+
+六周第一次课（7月3日）
+9.1 正则介绍_grep上
+9.2 grep中
+9.3 grep下
+扩展
+把一个目录下，过滤所有*.php文档中含有eval的行
+grep -r --include="*.php" 'eval' /data/
+
+六周第二次课（7月4日）
+9.4/9.5 sed
+
+
+六周第三次课（7月5日）
+9.6/9.7 awk
+扩展
+把这里面的所有练习题做一下
+http://www.apelearn.com/study_v2/chapter14.html
+
+
+六周第四次课（7月6日）
+复习 
+扩展
+打印某行到某行之间的内容http://ask.apelearn.com/question/559
+sed转换大小写 http://ask.apelearn.com/question/7758
+sed在某一行最后添加一个数字http://ask.apelearn.com/question/288
+删除某行到最后一行 http://ask.apelearn.com/question/213
+打印1到100行含某个字符串的行 http://ask.apelearn.com/question/1048
+
+六周第五次课（7月7日）
+复习
+扩展
+awk 中使用外部shell变量http://ask.apelearn.com/question/199
+awk 合并一个文件 http://ask.apelearn.com/question/493
+把一个文件多行连接成一行 http://ask.apelearn.com/question/266
+awk中gsub函数的使用 http://ask.apelearn.com/question/200
+awk 截取指定多个域为一行 http://ask.apelearn.com/question/224
+过滤两个或多个关键词 http://ask.apelearn.com/question/198
+用awk生成以下结构文件 http://ask.apelearn.com/question/5494
+awk用print打印单引号 http://ask.apelearn.com/question/1738
+合并两个文件 http://ask.apelearn.com/question/945
+awk的参考教程 http://www.cnblogs.com/emanlee/p/3327576.html
+
+七周一次课（7月10日）
+10.1 使用w查看系统负载
+10.2 vmstat命令
+10.3 top命令
+10.4 sar命令
+10.5 nload命令
+
+七周二次课（7月11日）
+10.6 监控io性能
+10.7 free命令
+10.8 ps命令
+10.9 查看网络状态
+10.10 linux下抓包
+扩展tcp三次握手四次挥手 http://www.doc88.com/p-9913773324388.html
+tshark几个用法：http://www.aminglinux.com/bbs/thread-995-1-1.html
+
+七周三次课（7月12日）
+10.11 Linux网络相关
+10.12 firewalld和netfilter
+10.13 netfilter5表5链介绍
+10.14 iptables语法
+
+扩展（selinux了解即可）
+1. selinux教程  http://os.51cto.com/art/201209/355490.htm
+2.selinux pdf电子书  http://pan.baidu.com/s/1jGGdExK
+
+七周四次课（7月13日）
+10.15 iptables filter表案例
+10.16/10.17/10.18 iptables nat表应用
+
+扩展
+1. iptables应用在一个网段  http://www.aminglinux.com/bbs/thread-177-1-1.html
+2. sant,dnat,masquerade   http://www.aminglinux.com/bbs/thread-7255-1-1.html
+3. iptables限制syn速率  http://www.aminglinux.com/bbs/thread-985-1-1.html
+
+
+七周五次课（7月14日）
+10.19 iptables规则备份和恢复
+10.20 firewalld的9个zone
+10.21 firewalld关于zone的操作
+10.22 firewalld关于service的操作
+
+八周一次课（7月17日）
+10.23 linux任务计划cron
+10.24 chkconfig工具
+10.25 systemd管理服务
+10.26 unit介绍
+10.27 target介绍
+扩展
+1. anacron  http://blog.csdn.net/strikers1982/article/details/4787226
+2. xinetd服(默认机器没有安装这个服务，需要yum install xinetd安装）   http://blog.sina.com.cn/s/blog_465bbe6b010000vi.html
+3. systemd自定义启动脚本  http://www.jb51.net/article/100457.htm
+
+八周二次课（7月18日）
+10.28 rsync工具介绍
+10.29/10.30 rsync常用选项
+10.31 rsync通过ssh同步
+
+八周三次课（7月19日）
+10.32/10.33 rsync通过服务同步
+10.34 linux系统日志
+10.35 screen工具
+
+扩展
+1. Linux日志文件总管logrotate  http://linux.cn/article-4126-1.html
+2. xargs用法详解 http://blog.csdn.net/zhangfn2011/article/details/6776925    
